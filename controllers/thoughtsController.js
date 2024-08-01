@@ -23,7 +23,7 @@ module.exports = {
         }
     },
 
-    async addThought(req, res) {
+    async createThought(req, res) {
         try {
             const result = await Thought.create(req.body);
 
@@ -95,7 +95,7 @@ module.exports = {
         }
     },
 
-    async deleteReaction(req, res) {
+    async removeReaction(req, res) {
         try {
             const result = await Thought.findOneAndUpdate(
                 { _id: req.params.thoughtId },

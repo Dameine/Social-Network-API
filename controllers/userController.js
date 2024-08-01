@@ -26,7 +26,7 @@ module.exports = {
         }
     },
 
-    async addUser(req, res) {
+    async createUser(req, res) {
         try {
             const result = await User.create(req.body);
 
@@ -92,7 +92,7 @@ module.exports = {
         }
     },
 
-    async deleteFriend(req, res) {
+    async removeFriend(req, res) {
         try {
             const user = await User.findOneAndUpdate(
                 { _id: req.params.userId },
